@@ -66,6 +66,7 @@
 		B564ACDD274F69EE00D41471 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B57B62F627520FAB0084CACB /* UrlImageLoadClass.swift */,
 				B56E80B9274E609A00AFCD03 /* CustomMoveScreen.swift */,
 				B56E2640274CC7BB00E4BCFB /* CustomAlert.swift */,
 			);
@@ -108,7 +109,8 @@
 		B56E80A2274E106500AFCD03 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				B56E80AB274E190400AFCD03 /* CountryTable */,
+				B58BCBD92757973A004544F1 /* Protocols */,
+				B56E80AB274E190400AFCD03 /* Countries */,
 				B56E80AA274E186400AFCD03 /* Login */,
 			);
 			path = Screen;
@@ -124,18 +126,24 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		B56E80AB274E190400AFCD03 /* CountryTable */ = {
+		B56E80AB274E190400AFCD03 /* Countries */ = {
 			isa = PBXGroup;
 			children = (
-				B57B62F627520FAB0084CACB /* UrlImageLoadClass.swift */,
 				B56E80AC274E197500AFCD03 /* CountryDataModel.swift */,
 				B56E263E274CB4BB00E4BCFB /* CountryTVCell.swift */,
 				B56E80B0274E1C2500AFCD03 /* CountryVM.swift */,
 				B56E80B2274E1C8C00AFCD03 /* CountryVC.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		B58BCBD92757973A004544F1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
 				B564ACDE274F6DD200D41471 /* ProtocolListVC.swift */,
 				B58BCBD72757823F004544F1 /* ProtocolListVM.swift */,
 			);
-			path = CountryTable;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
