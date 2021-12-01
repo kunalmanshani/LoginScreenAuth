@@ -7,18 +7,11 @@
 
 import UIKit
 
-protocol PopupListDelegate: AnyObject {
-    func doneButtonAction(name: String)
-}
 
-class PopUpListView: UIViewController {
+class ProtocolListVC: UIViewController {
     
-    var data = [Protocols]()
-    var allData = [Protocols]()
-    var dnsData = [Dns]()
-    
-    weak var delegate: PopupListDelegate?
-    private var name: String?
+    var viewModel = ProtocolListVM()
+    weak var delegate: ProtocolListDelegate?
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var doneBtn: UIButton!
@@ -29,31 +22,8 @@ class PopUpListView: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerView.reloadAllComponents()
-        checkDuplicate()
-        
+        viewModel.checkDuplicate()
     }
-    
-    func selectedProtoData() {
-        dnsData = []
-        for proto in allData where proto.proto == name {
-            dnsData.append(contentsOf: proto.dns ?? [])
-        }
-        print(dnsData)
-    }
-    // Do any additional setup after loading the view.
-    func checkDuplicate() {
-        var uniqueDict : [String:Protocols] = [:]
-        allData = data
-        data = allData.filter { proto in
-            if uniqueDict[proto.proto] == nil {
-                uniqueDict[proto.proto] = proto
-                return true
-            } else {
-                return false
-            }
-        }
-    }
-    
     //this code in animation of picker view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -78,27 +48,26 @@ class PopUpListView: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        if let n = self.name {
+        if let n = viewModel.name{
             dismiss(animated: true) {
                 self.delegate?.doneButtonAction(name: n)
             }
         }
-        selectedProtoData()
-        
+        viewModel.selectedProtoData()
     }
-    
 }
-extension PopUpListView: UIPickerViewDelegate, UIPickerViewDataSource {
+
+extension ProtocolListVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+        return viewModel.data.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row].proto
+        return viewModel.data[row].proto
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        name = data[row].proto
+        viewModel.name = viewModel.data[row].proto
     }
 }

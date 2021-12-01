@@ -34,16 +34,14 @@ extension CountryVC: CountryTVCellDelegate {
     func showButtonDidTap(item: Countries) {
         
         viewModel.protocolArray = item.protocols
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PopUpListView") as! PopUpListView
-        //here data is array which is initialized in popup list view class
-        vc.data = viewModel.protocolArray
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProtocolListVC") as! ProtocolListVC
         vc.delegate = self
+        vc.viewModel.data = viewModel.protocolArray
         self.present(vc, animated: true, completion: nil)
     }
 }
 
-extension CountryVC: PopupListDelegate {
+extension CountryVC: ProtocolListDelegate {
     func doneButtonAction(name: String) {
         showAlert(title: "item selected", message: "\(name)")
     }
