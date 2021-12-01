@@ -13,7 +13,6 @@
 		B56E2641274CC7BB00E4BCFB /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E2640274CC7BB00E4BCFB /* CustomAlert.swift */; };
 		B56E38072745149D0060570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E38062745149D0060570C /* AppDelegate.swift */; };
 		B56E38092745149D0060570C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E38082745149D0060570C /* SceneDelegate.swift */; };
-		B56E380B2745149D0060570C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E380A2745149D0060570C /* ViewController.swift */; };
 		B56E380E2745149D0060570C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56E380C2745149D0060570C /* Main.storyboard */; };
 		B56E3810274514A30060570C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56E380F274514A30060570C /* Assets.xcassets */; };
 		B56E3813274514A30060570C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56E3811274514A30060570C /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 		B56E38032745149D0060570C /* LoginScreenAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreenAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56E38062745149D0060570C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56E38082745149D0060570C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B56E380A2745149D0060570C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B56E380D2745149D0060570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B56E380F274514A30060570C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B56E3812274514A30060570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 			children = (
 				B56E38062745149D0060570C /* AppDelegate.swift */,
 				B56E38082745149D0060570C /* SceneDelegate.swift */,
-				B56E380A2745149D0060570C /* ViewController.swift */,
 				B56E80A2274E106500AFCD03 /* Screen */,
 				B564ACDD274F69EE00D41471 /* Extensions */,
 				B56E380C2745149D0060570C /* Main.storyboard */,
@@ -222,7 +219,6 @@
 				B58BCBD82757823F004544F1 /* ProtocolListVM.swift in Sources */,
 				B56E80BC274E746400AFCD03 /* LoginModel.swift in Sources */,
 				B56E263F274CB4BB00E4BCFB /* CountryTVCell.swift in Sources */,
-				B56E380B2745149D0060570C /* ViewController.swift in Sources */,
 				B56E80BA274E609A00AFCD03 /* CustomMoveScreen.swift in Sources */,
 				B56E80AD274E197500AFCD03 /* CountryDataModel.swift in Sources */,
 				B56E80B1274E1C2500AFCD03 /* CountryVM.swift in Sources */,
