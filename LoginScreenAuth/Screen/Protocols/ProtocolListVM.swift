@@ -37,4 +37,5 @@ class ProtocolListVM {
         }
         print(dnsData)
     }
+    
 }

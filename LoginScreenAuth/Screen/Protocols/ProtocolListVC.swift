@@ -24,6 +24,9 @@ class ProtocolListVC: UIViewController {
         pickerView.reloadAllComponents()
         viewModel.checkDuplicate()
     }
+//    func pickerViewCustomization() {
+//        pickerView.
+//    }
     //this code in animation of picker view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
