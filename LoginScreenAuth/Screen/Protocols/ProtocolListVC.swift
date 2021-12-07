@@ -24,9 +24,6 @@ class ProtocolListVC: UIViewController {
         pickerView.reloadAllComponents()
         viewModel.checkDuplicate()
     }
-//    func pickerViewCustomization() {
-//        pickerView.
-//    }
     //this code in animation of picker view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,7 +37,7 @@ class ProtocolListVC: UIViewController {
             self.doneBtn.transform = .identity
             self.LabelView.transform = .identity
         } completion: { _ in
-            print("Completed")
+//            print("Completed")
         }
     }
     
@@ -72,5 +69,26 @@ extension ProtocolListVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         viewModel.name = viewModel.data[row].proto
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 50
+    }
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = (view as? UILabel) ?? UILabel()
+
+           label.textColor = .black
+        label.textAlignment = .center
+        switch UIDevice.current.userInterfaceIdiom {
+            case .phone:
+            label.font = UIFont.systemFont(ofSize: 20)
+            case .pad:
+            label.font = UIFont.systemFont(ofSize: 30)
+            @unknown default:
+            label.font = UIFont.systemFont(ofSize: 17)
+            }
+        label.text = viewModel.data[row].proto
+           // where data is an Array of String
+           return label
     }
 }

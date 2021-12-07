@@ -13,6 +13,7 @@ extension UIViewController {
         
         let story = UIStoryboard(name: storyboard, bundle: nil)
         let controller = story.instantiateViewController(withIdentifier: vc)
+//        controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true, completion: nil)
     }
 }

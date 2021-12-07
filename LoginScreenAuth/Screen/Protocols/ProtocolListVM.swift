@@ -35,7 +35,7 @@ class ProtocolListVM {
         for proto in allData where proto.proto == name {
             dnsData.append(contentsOf: proto.dns ?? [])
         }
-        print(dnsData)
+//        print(dnsData)
     }
     
 }

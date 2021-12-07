@@ -25,7 +25,7 @@ class CountryVC: UIViewController {
 extension CountryVC: CountryDelegate {
     func dataDidLoad() {
         tableView.reloadData()
-        print("dataDidLoad")
+//        print("dataDidLoad")
     }
 }
 
